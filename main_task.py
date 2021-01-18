@@ -7,8 +7,6 @@ from text_similarity import tf_idf_embedding
 _FR_LANG = 'fr_FR'
 _ENG_LANG = 'en_EN'
 
-_CATEGORIES_FIELD = 'categories'
-
 
 
 def display_information_by_POI(language=_ENG_LANG):
@@ -60,6 +58,7 @@ if __name__ == "__main__":
     # POI information display
     cat_repo = CategoryRepo(endpoint='datasets/categories.json')
     poi_repo = POIRepo(endpoint='datasets/pois.json')
+    # Ouput is provided as an html file to be viewd in the browser
     display_information_by_POI()
 
     # Text similarity
